@@ -1,27 +1,23 @@
 #include <stdio.h>
 /**
- *main	-coding
- *
- *Return: 0
+ * main - Entry point
+ * Description: Print base 16 numbers
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int num;
+	char c;
+	char d = '0';
 
-	num = 0;
-
-	int ch;
-
-	while (num < 10)
+	while (d <= '9')
 	{
-		putchar(num);
-		num++;
+		putchar(d);
+		d++;
 	}
-	for (ch = 'a'; ch <= 'f'; ch++)
+	for (c = 'a'; c <= 'f'; c++)
 	{
-		putchar(ch);
+		putchar(c);
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
