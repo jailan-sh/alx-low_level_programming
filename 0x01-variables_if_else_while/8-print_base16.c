@@ -10,9 +10,10 @@ int main(void)
 	int i = 0;
 	int ch;
 
-	while (i <= 9)
+	while (i <= '9')
 	{
-		putchar('i'); i++;
+		putchar('i');
+		i++;
 	}
 	for (ch = 'a'; ch <= 'f'; ch++)
 	{
