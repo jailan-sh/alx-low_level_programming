@@ -1,9 +1,10 @@
 #include <stdio.h>
- /**
-  * main -coding
-  *
-  * Return: 0
-  */
+
+/**
+ * main -coding
+ *
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 {
