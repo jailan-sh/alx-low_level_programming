@@ -1,27 +1,34 @@
 #include <stdio.h>
+
 /**
  * main	-coding
- * 
+ *
  * Return: 0
  */
+
 int main(void)
 {
-	int j;
-	int a;
+	int x;
+	int y;
 
-	for (j = 0; j < 10; j++)
+	for  (x = 0; x < 10; x++)
 	{
-		for (a = 1; a < 10; a++)
+		for (y = 1; y < 10; y++)
 		{
-			if (j < a && j!= a)
+			if (x < y && x != y)
 			{
-				putchar(j + '0');
-					putchar(a + '0');
-			putchar(',');
-	putchar(' ');
-	}
+				putchar(x + '0');
+				putchar(y + '0');
+				{
+					if (x < 8)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
 		}
 	}
-	putchar('\n');
+		putchar('\n');
 		return (0);
 }
