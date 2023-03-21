@@ -1,19 +1,17 @@
 #include "main.h"
 
 /**
- * main -coding
+ * tprint_alphabet - a function that prints the alphabet, in lowercase
  *
  * Return:0
  */
 
 void print_alphabet(void)
-{
-        int i = 'a';
+{	int i = 'a';
 
-        while(i <= 'z')
-        {
-                _putchar(i);
-                i++;
-        }
-        _putchar('\n');
+	while (i <= 'z')
+	{
+		_putchar(i);
+		i++; }
+	_putchar('\n');
 }
