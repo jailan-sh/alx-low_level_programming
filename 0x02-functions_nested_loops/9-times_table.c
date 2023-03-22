@@ -17,7 +17,7 @@ void times_table(void)
 		while (num2 <10)
 		{
 			num3 =0;
-			num3 = num 2 * num 1;
+			num3 = (num2 * num1);
 
 				_putchar(num3);
 				_putchar(',');
