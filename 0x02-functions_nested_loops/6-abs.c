@@ -6,13 +6,13 @@
  */
 int _abs(int ab)
 {
-	if (ab >= '-1')
+	if ('ab' >= '-1')
 	{
-		_putchar(ab * '-1');
+		_putchar('ab' * '-1');
 	}
 	else
-		(ab >= '1')
+		('ab' >= '1')
 	{
-		_putchar(ab);
+		_putchar('ab');
 	}
 }
