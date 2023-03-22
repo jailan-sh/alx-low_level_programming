@@ -23,14 +23,16 @@ void jack_bauer(void)
 			{
 				d = 0;
 			while (d < 3)
+			{
 				_putchar(a + '0');
 				_putchar(b + '0');
 				_putchar(':');
 				_putchar(c + '0');
 				_putchar(d + '0');
+			}d++
 			} c++;
 
 		} b++;
 	} a++;
-	_putchar('\n'\);
+	_putchar('\n');
 }
