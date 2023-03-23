@@ -21,7 +21,7 @@ void times_table(void)
 			{
 				c = c * n;
 
-				_putchar(c);
+				_putchar(c + '0');
 				_putchar(',');
 				_putchar(' ');
 			       	c++;
