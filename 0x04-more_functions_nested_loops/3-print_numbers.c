@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
  * print_numbers - check the code for Holberton School students.
  * Return: void .
  */
+
 void print_numbers(void)
 {
 	int i;
