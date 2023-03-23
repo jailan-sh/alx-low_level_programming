@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints the numbers
- * @a : variable 0 to 9
- * Return: void
+ * print_most_numbers - check the code for Holberton School students.
+ * Return: void .
  */
+
 void print_most_numbers(void)
 {
 int i;
