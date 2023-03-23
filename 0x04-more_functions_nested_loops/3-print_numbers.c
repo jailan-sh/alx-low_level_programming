@@ -1,19 +1,16 @@
 #include "main.h"
 /**
- * print_numbers - prints the numbers, from 0 to 9, followed by a new line
- * @a : variable
- * @a++ : increment
- * Return: 0
+ * print_numbers - check the code for Holberton School students.
+ * Return: void .
  */
-
 void print_numbers(void)
 {
-	int a;
+	int i;
+	i = 0;
 
-	for (a >= '0'; a <= '9'; a++)
+	while (i<=9)
 	{
-		_putchar(a + '0');
+		_putchar(i + '0');
 	}
-		_putchar('\n');
+	_putchar('\n');
 }
-
