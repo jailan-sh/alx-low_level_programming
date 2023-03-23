@@ -11,28 +11,18 @@ void more_numbers(void)
 	int num;
 	int cond;
 
-	count = 0;
-
-	while (count <= 9)
+	for (count = '0'; count < 10; count++)
 	{
-		num = 0;
-
-		while (num <= 14)
+		for (num = '0'; num <= 14; num++)
 		{
-			condition = num;
-			if (num < 10)
+			cond = num;
+			if (num > '9')
 			{
-				condition = num;
+				_putchar(1 + 48);
+				num = chond % 10;
 			}
-			else 
-			{
-				condition = '49';
-			}
-				_putchar(condition + 48);
-				num++
-
+			_putchar(num + 48);
 		}
 		_putchar('\n');
-		count++;
 	}
 }
