@@ -7,21 +7,32 @@
 
 void more_numbers(void)
 {
-	int a;
-	int b;
+	int count;
+	int num;
+	int cond;
 
-	a = 0;
+	count = 0;
 
-	while (a <= 9)
+	while (count <= 9)
 	{
-		b = 0;
+		num = 0;
 
-		while (b <= 14)
+		while (num <= 14)
 		{
-			_putchar(b + 48);
-			b++;
+			condition = num;
+			if (num < 10)
+			{
+				condition = num;
+			}
+			else 
+			{
+				condition = '49';
+			}
+				_putchar(condition + 48);
+				num++
+
 		}
 		_putchar('\n');
-		a++;
+		count++;
 	}
 }
