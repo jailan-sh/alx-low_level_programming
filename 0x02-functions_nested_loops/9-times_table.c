@@ -8,24 +8,30 @@ void times_table(void)
 {
 	int j;
 	int n;
-	int c;
+	int result;
 
 	j = 0;
 	while (j < 10)
 	{
-		n = 0;
+		_putchar('0');
+
+		n = 1;
 		while (n <10)
 		{
-			c =0;
-			while (c <10)
+			result = j * n;
+			
+			if (result < 9)
 			{
-				c = c * n;
-
-				_putchar(c + '0');
+				_putchar(result + '0');
+			}
+			else if (result > 9)
+			{
+				_putchar((result / 10) + '0');
+				_putchar?((result % 10) + '0');
 				_putchar(',');
 				_putchar(' ');
-			       	c++;
-			} n++;
+			}
+			 n++;
 		} j++;
 	}
 	_putchar('\n');
