@@ -21,11 +21,11 @@ void print_diagonal(int n)
 		{
 			for (c = 1; c < f; c++)
 			{
-				_putchar('\\');
+				_putchar(' ');
 			}
-			_putchar(' ');
-		}
+			_putchar('\\');
 		_putchar('\n');
+		}
 	}
 }
 
