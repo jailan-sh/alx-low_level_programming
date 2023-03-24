@@ -17,19 +17,15 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		f = 1;
-
-		while (f <= n)
+		for (f = 1; f <= n; f++)
 		{
-			c = 1;
-			while (c <= f)
+			for (c = 1; c < f; c++)
 			{
-				_putchar(' ');
-				c++;
+				_putchar('\\');
 			}
-			_putchar('\\');
-			f++;
+			_putchar(' ');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
+
