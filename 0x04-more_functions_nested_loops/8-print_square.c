@@ -9,7 +9,7 @@
 void print_square(int size)
 {
 	int c;
-	int d;
+	int b;
 
 	if (size <= 0)
 	{
@@ -17,13 +17,15 @@ void print_square(int size)
 	}
 	else
 	{
-		for (size = 1; size >= 1; size++)
-		{
-			for (c = 1; c <= size; c++)
+		for (c = 1; c <= size; c++)
 			{
-				_putchar('#');
+				for (b = 1; b <= size; b++)
+				{
+					_putchar('#');
+			
+				}
 				_putchar('\n');
 			}
-		}
+		
 	}
 }
