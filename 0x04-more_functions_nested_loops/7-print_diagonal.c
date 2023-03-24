@@ -24,10 +24,10 @@ void print_diagonal(int n)
 			c = 1;
 			while (c <= f)
 			{
-				_putchar('\\');
+				_putchar(' ');
 				c++;
 			}
-			_putchar(' ');
+			_putchar('\\');
 			f++;
 		}
 		_putchar('\n');
