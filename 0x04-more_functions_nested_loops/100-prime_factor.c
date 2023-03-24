@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "holberton.h"
+
 /**
  * main - prints the biggest prime factor of a number.
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	long int number;
