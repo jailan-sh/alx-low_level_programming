@@ -5,6 +5,7 @@
  * @n: input number of times to print '_'
  * Return: a straight line
  */
+
 void print_line(int n)
 {
 	int f;
@@ -20,5 +21,4 @@ void print_line(int n)
 		_putchar('_');
 		}
 	}
-	_putchar('\n');
 }
