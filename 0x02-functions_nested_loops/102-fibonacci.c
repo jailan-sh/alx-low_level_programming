@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i;
-       unsigned long a, b, result;
+	unsigned long a, b, result;
 
 	a = 0;
 	b = 1;
@@ -19,7 +19,7 @@ int main(void)
 		printf("%lu", result);
 		a = b;
 		b = result;
-		if (i <49)
+		if (i < 49)
 			printf(", ");
 	}
 	printf("\n");
