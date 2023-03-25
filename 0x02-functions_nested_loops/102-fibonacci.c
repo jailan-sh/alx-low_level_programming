@@ -7,8 +7,7 @@
 
 int main(void)
 {
-	int i;
-	unsigned long a, b, result;
+	int i, a, b, result;
 
 	a = 0;
 	b = 1;
@@ -16,11 +15,12 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		result = a + b;
-		printf("%lu", result);
+		printf("%d", result);
 		a = b;
 		b = result;
 		if (i <49)
 			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
