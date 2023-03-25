@@ -7,7 +7,8 @@
 
 int main(void)
 {
-	int i, a, b, result;
+	int i;
+	unsigned long a, b, result;
 
 	a = 0;
 	b = 1;
@@ -18,6 +19,10 @@ int main(void)
 		printf("%d, ", a);
 		a = b;
 		b = result;
+		if (i == 49)
+			printf("\n");
+		else
+			printf(",");
 	}
 	return (0);
 }
