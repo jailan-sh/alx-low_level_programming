@@ -2,7 +2,7 @@
 
 /**
  * print_times_table - coding
- * @n :  variable 
+ * @n :  variable
  */
 
 void print_times_table(int n)
