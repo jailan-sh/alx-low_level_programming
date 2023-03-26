@@ -8,7 +8,7 @@
 int main(void)
 {
 	int a, i, b, result;
-	unsigned long sum;
+	float sum;
 
 	a = 0;
 	b = 1;
@@ -18,11 +18,12 @@ int main(void)
 		result = a + b;
 		a = b;
 		b = result;
-	}
-		if ((result < 4000000) && (result % 2 == 0))
-		
+
+		if (result < 4000000)
+		       break;
+		if ((result % 2) == 0)
 			sum += result;
-				printf("%lu\n", sum);
-		
-	
+	}
+				printf("%f\n", sum);
+				return (0);
 }
