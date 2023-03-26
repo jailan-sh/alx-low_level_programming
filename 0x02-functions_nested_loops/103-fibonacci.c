@@ -18,10 +18,11 @@ int main(void)
 		result = a + b;
 		a = b;
 		b = result;
+	}
 		if ((result < 4000000) && (result % 2 == 0))
-		{
+		
 			sum += result;
 				printf("%lu\n", sum);
-		}
-	}
+		
+	
 }
