@@ -7,23 +7,21 @@
 
 int main(void)
 {
-	unsigned long a, i, b, result;
-	float sum;
+	unsigned long a, i, b, result,sum;
 
 	a = 0;
 	b = 1;
 
-	for (i = 0; i <= 35; i++)
+	for (i = 0; i < 50; i++)
 	{
 		result = a + b;
-
-		if (result < 4000000)
-		       break;
-		if ((result % 2) == 0)
+			a = b;
+		b = result;
+		if ((result % 2) == 0) && (result < 4000000))
+		{
 			sum += result;
-		a = b;
-                b = result;
+		}
 	}
-				printf("%f\n", sum);
+				printf("%lu\n", sum);
 				return (0);
 }
