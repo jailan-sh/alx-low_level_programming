@@ -6,20 +6,19 @@
   */
 int main(void)
 {
-	unsigned long count, i, j, k, sums;
+	int main(void)
+{
+	int a = 0, b = 1, next = 0;
+	int sum = 0;
 
-	i = sums = 0;
-	j = 1;
-	for (count = 0; count < 50; count++)
+	while (next < 4000000)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		if (k % 2 == 0 && k < 4000000)
-		{
-			sums += k;
-		}
+		next = a + b;
+		a = b;
+		b = next;
+		if (next % 2 == 0)
+			sum += next;
 	}
-	printf("%lu\n", sums);
+	printf("%i\n", sum);
 	return (0);
 }
