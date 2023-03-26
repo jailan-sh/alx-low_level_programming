@@ -15,6 +15,6 @@ int main(void)
 		if ((m % 3 == 0) || (m % 5 == 0))
 			pro += m;
 	}
-		printf("%d\n", pro);
+	printf("%d\n", pro);
 		return (0);
 }
