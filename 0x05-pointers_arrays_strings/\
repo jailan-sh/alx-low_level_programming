@@ -1,0 +1,14 @@
+#include "main.h"
+/**
+ * _puts : a function that prints a string
+ *
+ * @str : pointer
+ * return : str
+ */
+
+void _puts(char *str)
+{
+	char *str[100];
+	_putchar('\n');
+	return (_puts);
+}
