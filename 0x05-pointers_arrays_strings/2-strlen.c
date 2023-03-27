@@ -11,7 +11,6 @@ int _strlen(char *s)
 	int i;
 
 	for (i = 0; *s[i]; i++)
-	{
-		_putchar(i + 48);
-	}
+	
+		return (i);
 }
