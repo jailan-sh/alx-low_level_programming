@@ -1,23 +1,20 @@
 #include "main.h"
- /**
-  * puts2 -  prints every other character of a string
-  *
-  * @str : pointer
-  * return: 0;
-  */
+
+/**
+ * puts_half - prints the second half of the string
+ * @str: the string reference
+ * Return: 0
+ */
 
 void puts2(char *str)
 {
-	int i = 0;
+	int i;
 
-	for (i = 0; str[i] >= '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if  (i % 2 == 0)
 
 		_putchar(str[i]);
-
-		else
-			continue;
 
 	}
 	_putchar('\n');
