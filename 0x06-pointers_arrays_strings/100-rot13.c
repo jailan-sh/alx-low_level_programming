@@ -23,6 +23,7 @@ char *rot13(char *x)
 			if (x[i] == rot_char[l])
 			{
 				x[i] = rot_another[l];
+				break;
 			}
 			l++;
 		}
