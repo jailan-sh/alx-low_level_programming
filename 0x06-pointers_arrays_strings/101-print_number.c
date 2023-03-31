@@ -5,38 +5,43 @@
  * @n: number tested
  * Return: Always 0.
  */
-
 void print_number(int n)
 {
-	int m;
+	int i, j, digit, digits, power;
+	unsigned int temp, numchar, number;
 
-	if  (n >= 10 && n < 100)
-	{
-		_putchar((n / 10) + 48);
-		_putchar((n % 10) + 48);
-	}
-	if (n < 10 && n >= 0)
-	{
-		_putchar(n + 48);
-	}
+	digit = 0;
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -n;
-		_putchar((m / 10) + 48);
-		_putchar((m % 10) + 48);
+		temp = -n;
 	}
-	if  (n >= 100 && n < 1000)
+	else
 	{
-		_putchar((n / 100) + 48);
-		_putchar((n / 10) % 10 + 48);
-		_putchar((n % 10) + 48);
+		temp = n;
 	}
-	if  (n >= 1000 && n <= 10000)
+
+	number = temp;
+
+	while (number >= 10)
 	{
-		_putchar((n / 1000) + 48);
-		_putchar((n / 100) % 10 + 48);
-			_putchar((n / 10) % 10 + 48);
-			_putchar((n % 10) + 48);
+		number = number / 10;
+		digit++;
+	}
+	digits = digit + 1;
+	power = 1;
+	i = 1;
+
+	while (i < digits)
+	{
+		power = power * 10;
+		i++;
+	}
+	j = power;
+	while (j >= 1)
+	{
+		numchar = (temp / j) % 10;
+		_putchar(numchar + '0');
+		j = j / 10;
 	}
 }
