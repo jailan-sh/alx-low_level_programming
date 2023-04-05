@@ -11,21 +11,22 @@
 
 void print_diagsums(int *a, int size)
 {
-	int index, sum = 0, sum_2 = 0;
+	int i = 0;
+	int j = size - 1;
+	int sum = 0;
+	int sum_2 = 0;
 
-	for (index = 0; index < size; index++)
+	while (i <= (size * size))
 	{
-		sum += a[index];
-		a += size;
+		sum = sum + a[i];
+		i = i + size + 1;
+	}
+	while (j < (size * size) - 1)
+	{
+			sum_2 += a[j];
+			j = j + size - 1;
 	}
 
-	a -= size;
-
-	for (index = 0; index < size; index++)
-	{
-		sum_2 += a[index];
-		a -= size;
-	}
 	printf("%d, %d\n", sum, sum_2);
 
 }
