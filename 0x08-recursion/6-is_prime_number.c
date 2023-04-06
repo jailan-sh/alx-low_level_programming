@@ -1,45 +1,49 @@
 #include "main.h"
 
+int _prime_manual(int n, int i);
+
 /**
+ * is_prime_number - return the sqrt of a natural number.
+ * @n: natural number
  *
+ *
+ * Return: 1 if is prime otherwise 0.
  */
 
 int is_prime_number(int n)
 {
-	int _sqrt_recursion(int n)
-{
-	if (n < 0)
+	if (n <= 1)
 	{
-		return (-1);
+		return (0);
 	}
-	else if (n == 0 || n == 1)
+	else if (n == 2)
 	{
-		return (n);
+		return (1);
 	}
 	else
 	{
-		return (sqrt_manual(n, 1));
+		return (is_prime_manual(n, 2));
 	}
 }
 /**
- * sqrt_manual - calculate manualy the sqrt of a number.
+ * is_prime_manual - calculate if the number is prime.
  * @n: natural number
- * @i: counter or number to be multiplied.
+ * @i: counter or divisor of n.
  *
- * Return: sqrt 0 if sqrt is not natural.
+ * Return: 1 if is prime 0 otherwise.
  */
-int sqrt_manual(int n, int i)
+int _prime_manual(int n, int i)
 {
-	if (i * i == n)
+	if (n % i == 0)
 	{
-		return (i);
+		return (0);
 	}
-	else if (i * i > n)
+	else if (i == (n - 1) && n % i != 0)
 	{
-		return (-1);
+		return (1);
 	}
 	else
 	{
-		return (sqrt_manual(n, i + 1));
+		return (is_prime_manual(n, i + 1));
 	}
 }
