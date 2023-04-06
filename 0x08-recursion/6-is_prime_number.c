@@ -22,7 +22,7 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		return (is_prime_manual(n, 2));
+		return (_prime_manual(n, 2));
 	}
 }
 /**
@@ -44,6 +44,6 @@ int _prime_manual(int n, int i)
 	}
 	else
 	{
-		return (is_prime_manual(n, i + 1));
+		return (_prime_manual(n, i + 1));
 	}
 }
