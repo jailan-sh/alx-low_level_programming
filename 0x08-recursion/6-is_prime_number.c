@@ -26,7 +26,7 @@ int is_prime_number(int n)
 	}
 }
 /**
- * is_prime_manual - calculate if the number is prime.
+ * _prime_manual - calculate if the number is prime.
  * @n: natural number
  * @i: counter or divisor of n.
  *
