@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main _ print the arguments of the program
+ * main -  a program that multiplies two numbers.
  * @argc : count
  * @argv : vector
- * return: 0
+ *
+ * Return: 1 if are less of 2 arguments otherwise 0.
  */
 
 int main(int argc, char *argv[])
@@ -18,9 +19,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	else 
+	else
 	{
-		result = atoi(*(argv + 1)) * atoi(*(argv + 2));
+		result = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", result);
 	}
 	return (0);
