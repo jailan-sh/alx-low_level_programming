@@ -9,23 +9,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int coin = 0;
-	int values[] = {25, 10, 5, 2, 1};
-	int money = atoi(argv[1]);
-
-
-	if (argc != 2)
+	if (argc == 2)
 	{
-		printf("Error\n");
-		return (1);
-	}
+		int i;
+		int coin = 0;
+		int values[] = {25, 10, 5, 2, 1};
+		int money = atoi(argv[1]);
 
-	if (money < 0)
-	{
-		printf("0\n");
-	}
-	for (i = 0; i < 5; i++)
+		for (i = 0; i < 5; i++)
 	{
 		if (money >= values[i])
 		{
@@ -39,6 +30,12 @@ int main(int argc, char *argv[])
 	}
 
 		printf("%d\n", coin);
+	}
+	else 
+	{
+		printf("Error\n");
+		return (1);
+	}
 	return (0);
 }
 
