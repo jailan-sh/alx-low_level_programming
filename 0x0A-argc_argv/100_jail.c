@@ -13,10 +13,10 @@
 
 int main(int argc, char *argv[])
 {
-	int coins = 0;
 	int amount = atoi(argv[argc - 1]);
 	int i;
-	int value[] = {25, 10, 5, 2, 1};
+	int coins[] = {25, 10, 5, 2, 1};
+	int total_coins = 0;
 
 	if (argc != 2)
 	{
@@ -28,23 +28,16 @@ int main(int argc, char *argv[])
                 {
                         printf("0\n");
                         return (0);
-                }
-	else
+		}
+			else
 	{
 		for (i = 0; i < 5; i++)
-		{
-			if (value[i] <= amount)
-			{
-				coins = coins + (amount / value[i]);
-				amount -= (amount / value[i]) * value[i];
-				if (amount == 0)
-			{
-				printf("%d\n", coins);
-				break;
-			}
-		}
-	
-		}
+		    {
+	    int count = amount / coins[i];
+	total_coins += count;
+	amount -= count * coins[i];
+    }
 	}
-	return (0);
+	printf("Total coins used: %d\n", total_coins);
+    return (0);
 }
