@@ -1,1 +1,1 @@
-this the first repo c langage
+0x07-pointers_arrays_strings
