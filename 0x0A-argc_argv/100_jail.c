@@ -13,31 +13,30 @@
 
 int main(int argc, char *argv[])
 {
-	int amount = atoi(argv[argc - 1]);
-	int i;
-	int coins[] = {25, 10, 5, 2, 1};
-	int total_coins = 0;
+	int coins = 0;
+	int cents = atoi(argv[1]);
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	else if (amount < 0)
-                {
-                        printf("0\n");
-                        return (0);
-		}
-			else
+	if (cents < 0)
 	{
-		for (i = 0; i < 5; i++)
-		    {
-	    int count = amount / coins[i];
-	total_coins += count;
-	amount -= count * coins[i];
-    }
+		printf("0\n");
+		return (0);
 	}
-	printf("Total coins used: %d\n", total_coins);
+	coins = cents / 25;
+	cents = cents % 25;
+	coins = coins + cents / 10;
+	cents = cents % 10;
+	coins = coins + cents / 5;
+	cents = cents % 5;
+	coins = coins + cents / 2;
+	cents = cents % 2;
+	coins = cents + coins;
+
+
+	printf("%d\n", coins);
     return (0);
 }
