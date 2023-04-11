@@ -24,12 +24,11 @@ int wildcmp(char *s1, char *s2)
 		while (*(s2 + 1) == '*')
 		{
 			s2++;
+		}
 		if (*(s2 + 1) == '\0')
 		{
 			return (1);
 		}
-		}
-
 		while (*s1 != '\0')
 		{
 			if (wildcmp(s1, s2 + 1))
@@ -38,7 +37,7 @@ int wildcmp(char *s1, char *s2)
 					}
 					s1++;
 					}
-	}
-					return (0);					}
+}
+					return (0);
 }
 
