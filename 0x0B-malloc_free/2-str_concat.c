@@ -17,9 +17,13 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1 = strlen(s1);
 	unsigned int l2 = strlen(s2);
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+	       s1 = " ";
+	}
+	if (s2 == NULL)
+	{
+		s2 = " ";
 	}
 	new = malloc(l1 + l2 + 1);
 			if (new == NULL)
