@@ -30,7 +30,9 @@ char *_strdup(char *str)
 	{
 		t[i] = str[i];
 	}
-
+	/**
+	 * strcpy(t, str);
+	 */
 	return (t);
 	free(t);
 }
