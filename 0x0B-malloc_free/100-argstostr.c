@@ -27,19 +27,19 @@ char *argstostr(int ac, char **av)
 		len = strlen(av[i]);
 		to_len += len + 1;
 	}
-	new = malloc(sizeof(char) * to_len);
+	new = malloc(sizeof(char) * to_len + 1);
 
 	if (new == NULL)
-	{
+	
 		return (NULL);
-	}
+	
 
 	len = 0;
 	for (i = 0; i < ac; i++)
 	{
-
 		for (j = 0; av[i][j]; j++)
 			new[len++] = av[i][j];
+
 		new[len++] = '\n';
 	}
 	new[len] = '\0';
