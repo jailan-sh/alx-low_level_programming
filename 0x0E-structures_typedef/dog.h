@@ -2,10 +2,10 @@
 #define _DOG_h_
 
 /**
- * struct dog -  Define a new type
- * @name : char
- * @age : float
- * @owner : char
+ * struct dog -  ID for a pet
+ * @name : name
+ * @age : age
+ * @owner : name of the owner
  */
 
 typedef struct dog
@@ -14,4 +14,7 @@ typedef struct dog
 	float age;
 	char *owner;
 } my_dog;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif
