@@ -3,15 +3,16 @@
 /**
  * print_dog - function that prints a struct dog
  * dog *d : struct pointer to dog
+ * @d : pointer to struct
  */
 
 void print_dog(struct dog *d)
 {
-	if (d != NULL)
+	if (d != 0)
 	{
 	if ((*d).name == NULL)
 	{
-		printf("Name: (nil)");
+		printf("Name: (nil)\n");
 	}
 	else
 	{
@@ -19,7 +20,7 @@ void print_dog(struct dog *d)
 	}
 	if ((*d).age == 0)
 	{
-		printf("Age: (nil)");
+		printf("Age: (nil)\n");
 	}
 	else
 	{
@@ -34,4 +35,4 @@ void print_dog(struct dog *d)
 		printf("Owner: %s\n", (*d).owner);
 	}
 	}
-}	
+}
