@@ -1,1 +1,12 @@
-0x07-pointers_arrays_strings
+C
+Basics
+Functions
+Pointers
+Data Structures
+Singly Linked Lists
+Arrays
+Bit Manipulation
+Variadic Functions
+Memory Management
+File Redirection
+printf
