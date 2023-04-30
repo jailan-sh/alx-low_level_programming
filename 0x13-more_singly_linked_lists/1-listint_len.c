@@ -12,16 +12,20 @@
 size_t listint_len(const listint_t *h)
 {
 	unsigned int count = 0;
+	const listint_t *new;
 
-	if (h != NULL)
-	{
-		count++;
-		h = h->next;
-	}
-	else
+	if (h == NULL)
 	{
 		return (0);
 	}
-	count += 1;
+	else
+	{
+		new = h;
+		while (new != NULL)
+		{
+			count++;
+			new = new->next;
+		}
+	}
 	return (count);
 }
