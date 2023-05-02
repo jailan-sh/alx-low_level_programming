@@ -1,45 +1,41 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - Finds the loop in a linked list
- * @head: A pointer to the head node of the list
+ * find_listint_loop - Finds the loop contained in
+ * a listint_t linked list.
+ * @head: A pointer to the listint_t list.
  *
- * Return: The address of the node where the loop starts, or NULL if there is no loop
+ * Return: If there is no loop - NULL.
+ * Otherwise - the address of the loop starts.
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-    listint_t *slow = head;
-    listint_t *fast = head;
+	listint_t *tortoise, *hare;
 
-    /* Check if the list is empty or has only one node */
-    if (head == NULL || head->next == NULL)
-        return NULL;
+	if (head == NULL || head->next == NULL)
+		return (NULL);
 
-    /* Move the slow and fast pointers until they meet */
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
+	tortoise = head->next;
+	hare = (head->next)->next;
 
-        /* If there is a loop, the slow and fast pointers will eventually meet */
-        if (slow == fast)
-            break;
-    }
+	while (hare)
+	{
+		if (tortoise == hare)
+		{
+			tortoise = head;
 
-    /* If there is no loop, return NULL */
-    if (slow != fast)
-        return NULL;
+			while (tortoise != hare)
+			{
+				tortoise = tortoise->next;
+				hare = hare->next;
+			}
 
-    /* Move one of the pointers to the beginning of the list */
-    slow = head;
+			return (tortoise);
+		}
 
-    /* Move both pointers at the same pace until they meet again */
-    while (slow != fast)
-    {
-        slow = slow->next;
-        fast = fast->next;
-    }
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
+	}
 
-    /* Return the address of the node where the loop starts */
-    return slow;
+	return (NULL);
 }
