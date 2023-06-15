@@ -13,11 +13,24 @@ void free_dlistint(dlistint_t *head)
 
 	if (head != NULL)
 	{
-		while (head)
+		if (head->next == NULL)
 		{
-			node = head->prev;
-			free(head);
-			head = node;
+			while (head)
+			{
+				node = head->prev;
+				free(head);
+				head = node;
+			}
+		}
+		else if (head->next != NULL)
+		{
+			while (head)
+			{
+				node = head->next;
+				free(head);
+				head = node;
+			}
 		}
 	}
+		free(head);
 }
