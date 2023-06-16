@@ -22,6 +22,7 @@ int main(void)
 {
 	int a, b;
 	int n, c = 0;
+	FILE *fp;
 
 	for (a = 999; a >= 900; a--)
 	{
@@ -34,6 +35,8 @@ int main(void)
 			}
 		}
 	}
-	printf("%d\n",n);
+	fp = fopen("102.result", "w");
+	fprintf(fp, "%d", n);
+	fclose(fp);
 	return (0);
 }
