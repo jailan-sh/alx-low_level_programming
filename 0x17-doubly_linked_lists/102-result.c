@@ -35,7 +35,7 @@ int main(void)
 			}
 		}
 	}
-	fp = fopen("102.result", "w");
+	fp = fopen("102-result", "w");
 	fprintf(fp, "%d", n);
 	fclose(fp);
 	return (0);
