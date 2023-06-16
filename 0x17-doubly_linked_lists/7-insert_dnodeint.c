@@ -1,55 +1,43 @@
 #include "lists.h"
-
-/**
- * insert_dnodeint_at_index - a new node at a given position.
- * @h : head
- * @idx : index
- * @n : data
- *
- * Return: new node
- */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *pre = *h;
-	dlistint_t *cur = *h;
-	unsigned int i = 0;
-	dlistint_t *new = malloc(sizeof(dlistint_t));
+	dlistint_t *newnode, *temp;
+	unsigned int index = 0, count = 0;
 
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	if (*h == NULL)
-		return (NULL);
-	if ((*h)->next)
-		*h = (*h)->next, i++;
-	else
-		*h = (*h)->prev, i++;
-	if (idx > i - 1)
-		return (NULL);
-	if (cur->next != NULL)
+	if (idx == 0)
 	{
-		for (i = 0; i < idx && cur != NULL; i++)
+		newnode = add_dnodeint(h, n);
+		return (newnode);
+	}
+	temp = *h;
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		count++;
+	}
+	if (idx == count)
+	{
+		newnode = add_dnodeint_end(h, n);
+		return (newnode);
+	}
+	newnode = (dlistint_t *)malloc(sizeof(dlistint_t));
+	if (newnode == NULL)
+		return (NULL);
+	newnode->n = n;
+	temp = *h;
+	while (index < idx)
+	{
+		temp = temp->next;
+		index++;
+		if (temp == NULL)
 		{
-			cur = cur->next;
-			pre = cur->prev;
-
+			free(newnode);
+			return (NULL);
 		}
-		new->next = cur;
-		cur->prev = new;
-		new->prev = pre;
-		pre->next = new;
 	}
-	else
-	{
-		for (i = 0; i < idx && cur != NULL; i++)
-                {
-                        cur = cur->prev;
-			pre = cur->next;
-                }
-                new->prev = cur;
-                cur->next = new;
-		new->next = pre;
-		pre->prev = new;
-	}
-	return (new);
+	newnode->prev = temp->prev;
+	newnode->next = temp;
+	temp->prev->next = newnode;
+	temp->prev = newnode;
+	return (newnode);
 }
