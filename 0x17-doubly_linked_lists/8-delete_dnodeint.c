@@ -1,29 +1,28 @@
 #include "lists.h"
 
 /**
- * dlistint_len - Returns the number of elements in a doubly linked list
- * @h: Pointer to head node of list
+ * len_list - Returns the number of elements in a doubly linked list
+ * @h: dlinked list
  *
- * Return: number of elements in list
+ * Return: len list
  */
-size_t dlistint_len(const dlistint_t *h)
+size_t len_list(const dlistint_t *h)
 {
-	size_t counter = 0;
+	size_t num= 0;
 
 	while (h != NULL)
 	{
-		counter++;
+		num++;
 		h = h->next;
 	}
-	return (counter);
+	return (num);
 }
-
 /**
- * delete_dnodeint_at_index - deletes the node at a specified index
- * @head: double pointer to head of dlistint_t linked list
- * @index: positionof node to delete
+ * delete_dnodeint_at_index - deletes the node at index
+ * @head: pointer to head of doubly linked list
+ * @index: index to look for
  *
- * Return: 1 on success, -1 on failure
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -31,7 +30,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp;
 
 	temp = *head;
-	if (*head == NULL || index > dlistint_len(temp))
+	if (*head == NULL || index > len_list(temp))
 		return (-1);
 	if (index == 0 && temp->next)
 	{
