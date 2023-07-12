@@ -118,12 +118,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * shash_table_get - retrieves an element from the shash table
- * @ht: hash table
- * @key: key for hash table
+ * shash_table_get - function that retrieves a value associated with a key.
+ * @ht : hash Table
+ * @key : key
  *
- * Return: Pointer to element or NULL if failed
+ * Return: the value associated with the element,
+ * or NULL if key couldn’t be found
  */
+
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	shash_node_t *shnode = NULL;
@@ -145,12 +147,14 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 	return (NULL);
 }
+
 /**
- * shash_table_print - prints the hash table using the sorted linked list
- * @ht: hash table
+ * shash_table_print - function that prints a hash table.
+ * @ht : hash table
  *
- * Return: No Return
+ * Return: void
  */
+
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *hkey;
@@ -172,13 +176,14 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 
 }
+
 /**
- * shash_table_print_rev - prints the hash table using the sorted linked list
- * but in reverse
- * @ht: hash table
+ * shash_table_print_rev - to prit hash table in reverse order
+ * @ht : hash table
  *
- * Return: No Return
+ * Return:void
  */
+
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *hkey;
@@ -200,12 +205,14 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 
 }
+
 /**
- * shash_table_delete - frees a shash table
- * @ht: hash table
+ * hash_table_print - function that prints a hash table.
+ * @ht : hash table
  *
- * Return: No Return
+ * Return: void
  */
+
 void shash_table_delete(shash_table_t *ht)
 {
 	shash_node_t *shnode, *tmp;
